@@ -16,9 +16,9 @@ namespace FirstML
             Weights = new float?[numOfWeights];
             for (int i = 0; i < numOfWeights; i++)
             {
-                Weights[i] = Util.RanNum(0, 1);
+                Weights[i] = 1;
             }
-            Bias = Util.RanNum(0, 1);
+            Bias = 1;
             Value = value;
         }
     }

@@ -10,23 +10,39 @@ namespace FirstML
         {
             ML.Init();
             Console.WriteLine("stupid brain");
-            for (int i = 0; i < 4; i++)
+            ML.Show();
+            for (int i = 0; i < ML.Inputs.Length; i++)
             {
                 ML.InsertInput(ML.Inputs[i]);
                 ML.Proccess();
-                ML.ShowResult();
+                ML.ShowResults(i);
             }
-            for (int i = 0; i < 100000; i++)
+            do
             {
-                ML.Mutate(Ran.Next(0,4));
-            }
+                for (int i = 0; i < 100; i++)
+                {
+                    for (int j = 0; j < ML.Inputs.Length; j++)
+                    {
+                        ML.Mutate(j);
+                    }
+                }
+            } while (!ML.IsSmart());
+
             Console.WriteLine("trained brain");
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < ML.Inputs.Length; i++)
             {
                 ML.InsertInput(ML.Inputs[i]);
                 ML.Proccess();
-                ML.ShowResult();
+                ML.ShowResults(i);
             }
+            do
+            {
+                int input1 = Convert.ToInt32(Console.ReadLine());
+                int input2 = Convert.ToInt32(Console.ReadLine());
+                ML.InsertInput(input1, input2);
+                ML.Proccess();
+                Console.WriteLine("Guess: "+ML.OutputLayer.Neurons[0].Value);
+            } while (true);
         }
     }
 }

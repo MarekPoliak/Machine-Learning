@@ -21,22 +21,21 @@ namespace FirstML
                 new TrainingData(1,0,1),
                 new TrainingData(1,1,0)
             };
-            InputLayer = new Layer(new Neuron[2]
+            InputLayer = new Layer(new Neuron[]
             {
                 new Neuron(0,null),
                 new Neuron(0,null)
             });
-            HiddenLayer = new Layer(new Neuron[3]
+            HiddenLayer = new Layer(new Neuron[]
             {
                 new Neuron(2,null),
                 new Neuron(2,null),
                 new Neuron(2,null)
             });
-            OutputLayer = new Layer(new Neuron[1]
+            OutputLayer = new Layer(new Neuron[]
             {
                 new Neuron(3,null)
             });
-            OutputLayer.Neurons[0].Bias = 1;
         }
 
         public static void Show()
@@ -61,6 +60,7 @@ namespace FirstML
             foreach (var item in OutputLayer.Neurons)
             {
                 Console.WriteLine("Value: " + item.Value);
+                Console.WriteLine("Bias: " + item.Bias);
                 Console.WriteLine("Num of Weights: " + item.Weights.Length);
                 foreach (var weight in item.Weights)
                 {
@@ -80,7 +80,7 @@ namespace FirstML
                 }
                 for (int i = 0; i < OutputLayer.Neurons.Length; i++)
                 {
-                    OutputLayer.Neurons[i].Net = (OutputLayer.Neurons[i].Weights[0] * HiddenLayer.Neurons[0].Value + OutputLayer.Neurons[i].Weights[1] * HiddenLayer.Neurons[1].Value + OutputLayer.Neurons[i].Weights[2] * HiddenLayer.Neurons[2].Value) + OutputLayer.Neurons[i].Bias;
+                    OutputLayer.Neurons[i].Net = OutputLayer.Neurons[i].Weights[0] * HiddenLayer.Neurons[0].Value + OutputLayer.Neurons[i].Weights[1] * HiddenLayer.Neurons[1].Value + OutputLayer.Neurons[i].Weights[2] * HiddenLayer.Neurons[2].Value + OutputLayer.Neurons[i].Bias;
                     OutputLayer.Neurons[i].Value = Util.Sigmoid(OutputLayer.Neurons[i].Net);
                 }
             }
@@ -92,34 +92,18 @@ namespace FirstML
             InputLayer.Neurons[1].Value = data.Input[1];
         }
 
-        public static void BackPropagation(TrainingData data)
+        public static void InsertInput(int i1, int i2)
         {
-            /*for (int i = 0; i < OutputLayer.Neurons[0].Weights.Length; i++)
-            {
-                float? ChanOutError = (float?)(0.5 * Math.Pow(((double)(data.Output - OutputLayer.Neurons[0].Value)), 2));
-                float? ChanNetOut = OutputLayer.Neurons[0].Value * (1 - OutputLayer.Neurons[0].Value);
-                float? ChanWeightNet = OutputLayer.Neurons[0].Weights[0] * HiddenLayer.Neurons[0].Value + OutputLayer.Neurons[0].Weights[1] * HiddenLayer.Neurons[1].Value + OutputLayer.Neurons[0].Weights[2] * HiddenLayer.Neurons[2].Value + OutputLayer.Neurons[0].Bias;
-                float? weightGradient = ChanOutError * ChanNetOut * ChanWeightNet;
-                OutputLayer.Neurons[0].Weights[i] -= LearningRate * weightGradient;
-            }
-            for (int i = 0; i < HiddenLayer.Neurons.Length; i++)
-            {
-                for (int j = 0; j < HiddenLayer.Neurons[i].Weights.Length; j++)
-                {
-                    float? ChanOutError = (float?)(0.5 * Math.Pow(((double)(data.Output - HiddenLayer.Neurons[i].Value)), 2));
-                    float? ChanNetOut = HiddenLayer.Neurons[i].Value * (1 - HiddenLayer.Neurons[i].Value);
-                    float? ChanWeightNet = HiddenLayer.Neurons[i].Weights[0] * InputLayer.Neurons[0].Value + HiddenLayer.Neurons[i].Weights[1] * InputLayer.Neurons[1].Value + +HiddenLayer.Neurons[i].Bias;
-                    float? weightGradient = ChanOutError * ChanNetOut * ChanWeightNet;
-                    HiddenLayer.Neurons[i].Weights[j] -= LearningRate * weightGradient;
-                }
-            }*/
+            InputLayer.Neurons[0].Value = i1;
+            InputLayer.Neurons[1].Value = i2;
         }
 
         public static void Mutate(int index)
         {
-            ML.InsertInput(ML.Inputs[index]);
+            TrainingData input = ML.Inputs[index];
+            ML.InsertInput(input);
             ML.Proccess();
-            float error = Math.Abs((float)(Inputs[index].Output - OutputLayer.Neurons[0].Value));
+            float error = Math.Abs((float)(input.Output - OutputLayer.Neurons[0].Value));
             if (error < 0.01)
             {
                 return;
@@ -128,15 +112,15 @@ namespace FirstML
             int OWI = Program.Ran.Next(0, OutputLayer.Neurons[0].Weights.Length);
             int HNI = Program.Ran.Next(0, HiddenLayer.Neurons.Length);
             int ONI = Program.Ran.Next(0, OutputLayer.Neurons.Length);
-            float HWV = Program.Ran.Next(-10, 11) / 100.0f;
-            float OWV = Program.Ran.Next(-10, 11) / 100.0f;
-            float HBV = Program.Ran.Next(-10, 11) / 100.0f;
+            float HWV = Program.Ran.Next(-100, 101) / 100.0f;
+            float OWV = Program.Ran.Next(-100, 101) / 100.0f;
+            float HBV = Program.Ran.Next(-100, 101) / 100.0f;
             HiddenLayer.Neurons[HNI].Weights[HWI] += HWV;
             HiddenLayer.Neurons[HNI].Bias += HBV;
             OutputLayer.Neurons[ONI].Weights[OWI] += OWV;
-            ML.InsertInput(ML.Inputs[index]);
+            ML.InsertInput(input);
             ML.Proccess();
-            float newError = Math.Abs((float)(Inputs[index].Output - OutputLayer.Neurons[0].Value));
+            float newError = Math.Abs((float)(input.Output - OutputLayer.Neurons[0].Value));
             if (newError > error)
             {
                 HiddenLayer.Neurons[HNI].Weights[HWI] -= HWV;
@@ -145,10 +129,24 @@ namespace FirstML
             }
         }
 
-        public static void ShowResult()
+        public static bool IsSmart()
         {
-            Console.WriteLine("Value: " + OutputLayer.Neurons[0].Value);
-            Console.WriteLine();
+            for (int i = 0; i < 4; i++)
+            {
+                ML.InsertInput(ML.Inputs[i]);
+                ML.Proccess();
+                if(!(OutputLayer.Neurons[0].Value + 0.01>ML.Inputs[i].Output) || !(OutputLayer.Neurons[0].Value - 0.01 < ML.Inputs[i].Output))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static void ShowResults(int i)
+        {
+            Console.WriteLine("input: " + ML.Inputs[i].Input[0] + " " + ML.Inputs[i].Input[1]);
+            Console.WriteLine("Expected: " + ML.Inputs[i].Output + "  Guess: " + ML.OutputLayer.Neurons[0].Value);
             Console.WriteLine();
         }
     }
