@@ -1,0 +1,11 @@
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\bin\Debug\netcoreapp2.1\FirstML.deps.json
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\bin\Debug\netcoreapp2.1\FirstML.runtimeconfig.json
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\bin\Debug\netcoreapp2.1\FirstML.runtimeconfig.dev.json
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\bin\Debug\netcoreapp2.1\FirstML.dll
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\bin\Debug\netcoreapp2.1\FirstML.pdb
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\obj\Debug\netcoreapp2.1\FirstML.csprojAssemblyReference.cache
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\obj\Debug\netcoreapp2.1\FirstML.csproj.CoreCompileInputs.cache
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\obj\Debug\netcoreapp2.1\FirstML.AssemblyInfoInputs.cache
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\obj\Debug\netcoreapp2.1\FirstML.AssemblyInfo.cs
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\obj\Debug\netcoreapp2.1\FirstML.dll
+C:\Users\Majo\Desktop\Machine Learning\FirstML\FirstML\obj\Debug\netcoreapp2.1\FirstML.pdb
