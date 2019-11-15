@@ -1,0 +1,11 @@
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\bin\Debug\netcoreapp2.1\RecognitionOfHandWriting.deps.json
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\bin\Debug\netcoreapp2.1\RecognitionOfHandWriting.runtimeconfig.json
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\bin\Debug\netcoreapp2.1\RecognitionOfHandWriting.runtimeconfig.dev.json
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\bin\Debug\netcoreapp2.1\RecognitionOfHandWriting.dll
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\bin\Debug\netcoreapp2.1\RecognitionOfHandWriting.pdb
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\obj\Debug\netcoreapp2.1\RecognitionOfHandWriting.csprojAssemblyReference.cache
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\obj\Debug\netcoreapp2.1\RecognitionOfHandWriting.csproj.CoreCompileInputs.cache
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\obj\Debug\netcoreapp2.1\RecognitionOfHandWriting.AssemblyInfoInputs.cache
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\obj\Debug\netcoreapp2.1\RecognitionOfHandWriting.AssemblyInfo.cs
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\obj\Debug\netcoreapp2.1\RecognitionOfHandWriting.dll
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\RecognitionOfHandWriting\obj\Debug\netcoreapp2.1\RecognitionOfHandWriting.pdb

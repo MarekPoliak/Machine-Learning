@@ -17,6 +17,7 @@ namespace FirstML
                 ML.Proccess();
                 ML.ShowResults(i);
             }
+            Console.ReadLine();
             do
             {
                 for (int i = 0; i < 100; i++)
@@ -35,10 +36,11 @@ namespace FirstML
                 ML.Proccess();
                 ML.ShowResults(i);
             }
+            ML.Show();
             do
             {
-                int input1 = Convert.ToInt32(Console.ReadLine());
-                int input2 = Convert.ToInt32(Console.ReadLine());
+                double input1 = Convert.ToDouble(Console.ReadLine());
+                double input2 = Convert.ToDouble(Console.ReadLine());
                 ML.InsertInput(input1, input2);
                 ML.Proccess();
                 Console.WriteLine("Guess: "+ML.OutputLayer.Neurons[0].Value);

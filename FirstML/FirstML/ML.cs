@@ -10,7 +10,6 @@ namespace FirstML
         public static Layer InputLayer { get; set; }
         public static Layer HiddenLayer { get; set; }
         public static Layer OutputLayer { get; set; }
-        public static float LearningRate { get; set; } = 0.5f;
 
         public static void Init()
         {
@@ -19,7 +18,7 @@ namespace FirstML
                 new TrainingData(0,0,0),
                 new TrainingData(0,1,1),
                 new TrainingData(1,0,1),
-                new TrainingData(1,1,0)
+                new TrainingData(1,1,0),
             };
             InputLayer = new Layer(new Neuron[]
             {
@@ -92,10 +91,10 @@ namespace FirstML
             InputLayer.Neurons[1].Value = data.Input[1];
         }
 
-        public static void InsertInput(int i1, int i2)
+        public static void InsertInput(double i1, double i2)
         {
-            InputLayer.Neurons[0].Value = i1;
-            InputLayer.Neurons[1].Value = i2;
+            InputLayer.Neurons[0].Value = (float?)i1;
+            InputLayer.Neurons[1].Value = (float?)i2;
         }
 
         public static void Mutate(int index)
@@ -131,7 +130,7 @@ namespace FirstML
 
         public static bool IsSmart()
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < ML.Inputs.Length; i++)
             {
                 ML.InsertInput(ML.Inputs[i]);
                 ML.Proccess();

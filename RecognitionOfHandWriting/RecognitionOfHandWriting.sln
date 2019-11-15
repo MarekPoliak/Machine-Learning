@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecognitionOfHandWriting", "RecognitionOfHandWriting\RecognitionOfHandWriting.csproj", "{811F3FE0-8752-46D0-9F18-7FB71CEF3DAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{811F3FE0-8752-46D0-9F18-7FB71CEF3DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811F3FE0-8752-46D0-9F18-7FB71CEF3DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811F3FE0-8752-46D0-9F18-7FB71CEF3DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{811F3FE0-8752-46D0-9F18-7FB71CEF3DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79E87B20-C8BE-4D6A-BA7A-496DEA1BEC48}
+	EndGlobalSection
+EndGlobal
