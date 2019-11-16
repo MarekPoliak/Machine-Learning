@@ -7,6 +7,8 @@ namespace RecognitionOfHandWriting
 {
     static class Util
     {
+        public static Random Ran { get; set; } = new Random();
+
         public static List<DigitData> LoadData(string path)
         {
             var digitData = new List<DigitData>();
