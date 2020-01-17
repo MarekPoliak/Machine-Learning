@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitDrawer2\\digitDrawer2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\dataAnalysis\\dataAnalysis.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\dataAnalysis\\dataAnalysis.csproj",
+        "projectName": "dataAnalysis",
+        "projectPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\dataAnalysis\\dataAnalysis.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj": {
+                "projectPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitDrawer2\\digitDrawer2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitDrawer2\\digitDrawer2.csproj",
+        "projectName": "digitDrawer2",
+        "projectPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitDrawer2\\digitDrawer2.csproj",
+        "packagesPath": "C:\\Users\\Majo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitDrawer2\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Majo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461",
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\dataAnalysis\\dataAnalysis.csproj": {
+                "projectPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\dataAnalysis\\dataAnalysis.csproj"
+              },
+              "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj": {
+                "projectPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj"
+              }
+            }
+          },
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\dataAnalysis\\dataAnalysis.csproj": {
+                "projectPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\dataAnalysis\\dataAnalysis.csproj"
+              },
+              "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj": {
+                "projectPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        },
+        "net461": {
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj",
+        "projectName": "digitTrainer",
+        "projectPath": "C:\\Users\\Majo\\Desktop\\Machine Learning\\RecognitionOfHandWriting\\digitTrainer\\digitTrainer.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\digitTrainer\bin\Debug\digitTrainer.exe.config
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\digitTrainer\bin\Debug\digitTrainer.exe
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\digitTrainer\bin\Debug\digitTrainer.pdb
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\digitTrainer\obj\Debug\digitTrainer.csprojAssemblyReference.cache
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\digitTrainer\obj\Debug\digitTrainer.csproj.CoreCompileInputs.cache
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\digitTrainer\obj\Debug\digitTrainer.exe
+C:\Users\Majo\Desktop\Machine Learning\RecognitionOfHandWriting\digitTrainer\obj\Debug\digitTrainer.pdb
